@@ -1,0 +1,4 @@
+127.0.0.1 - - [07/Nov/2019:14:13:21 +0900] "GET /health_check HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.88.7 Safari/537.36"
+127.0.0.1 - - [07/Nov/2019:14:13:21 +0900] "GET /favicon.ico HTTP/1.1" 404 232 "http://localhost:5000/health_check" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.88.7 Safari/537.36"
+127.0.0.1 - - [07/Nov/2019:14:14:53 +0900] "GET /health_check HTTP/1.1" 200 24 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.88.7 Safari/537.36"
+127.0.0.1 - - [07/Nov/2019:14:14:56 +0900] "GET /check HTTP/1.1" 200 5 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.146 Whale/2.6.88.7 Safari/537.36"

@@ -1,0 +1,16 @@
+
+server:
+  port: 5000
+
+database:
+  type: mongodb
+  settings:
+    db: admin
+    host: localhost
+    port: 27017
+    username: admin
+    password: admin
+
+
+logging:
+  level: debug

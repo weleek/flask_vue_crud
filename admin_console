@@ -1,0 +1,284 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Flask and mongodb sample web project.
+
+    Usage:
+        admin_console -h | --help | --version
+        admin_console web [--debug] (--start | --stop | --status)
+        admin_console database (--start | --stop | --status)
+        admin_console console
+        admin_console build
+        admin_console install
+        admin_console clean
+
+    Commands:
+        web         Flask web server.
+        database    MongoDB Server.
+        console     Enter the command line interface.
+        build       Compile project and zip.
+        install     install python libs.
+        clean       remove dist directory.
+
+    Options:
+        -h --help   help document.
+        --version   verbose mode.
+        --debug     flask development(templates auto reload) mode.
+"""
+# default libs
+import os
+import sys
+import cmd
+import platform
+import functools
+
+# 3rd party libs
+import yaml
+import docopt
+from colorama import Fore, Style
+
+# custom develop libs
+from server import server_app, database
+from server.common import utils
+from server.exceptions import QuitException, ArgsException
+from config import Config
+
+
+def parse_command(argv=None):
+    return docopt.docopt(__doc__, argv, version='0.0.1')
+
+
+def run_sub_command(args):
+    options = []
+    cmd = ''
+    for k, v in args.items():
+        if k[:2] != '--' and v == True:
+            cmd = k
+            continue
+
+        if k[:2] == '--' and v == True:
+            options.append(k)
+
+    if cmd:
+        os.system(f'make {cmd} {" ".join(options)}')
+
+
+def colorize(s, color):
+    color = eval(f'Fore.{color.upper()}')
+    return f'{color}{s}{Style.RESET_ALL}'
+
+
+def terminal_clear():
+    os.system("cls" if platform.system().lower() == "windows" else "clear")
+
+
+def load_quit_input(func):
+    @functools.wraps(func)
+    def wrappers(*args, **kwargs):
+        try:
+            func(*args, **kwargs)
+        except Exception as e:
+            print(e)
+        finally:
+            input('\n\nPlease enter to continue...')
+            terminal_clear()
+            g_cmd_shell.show_menu()
+    return wrappers
+
+
+class CommandShell(cmd.Cmd):
+    """Common command shell interface."""
+    description = {"main":
+        {
+            1: """================================ Management Program ==============================================
+[P] Process task.
+[Q] Quit."""
+        },
+        "process task":
+            {
+                1: """================================== Process Task ==================================================
+[A] All service check.
+[W] Web service start.
+[E] Web service shutdown.
+[R] Web service status.
+[D] Database service start.
+[F] Database service shutdown.
+[G] Database service status.
+[Q] quit.
+            """
+            }
+    }
+
+    def __init__(self, name, config=None):
+        """
+        Create common shell class
+        """
+        cmd.Cmd.__init__(self)
+        self.config = config
+        self.options = config.options
+        self.context = 'main'
+        self.prev_context = ''
+        self.step = 1
+        self.intro = self.description[self.context][self.step]
+        self.help_text = "press <Tab> to expand command or type ? to get any helps."
+        self.prompt = f'{colorize(name, "lightgreen_ex")} > '
+        self.choice = False
+        global g_cmd_shell
+        g_cmd_shell = self
+
+    def emptyline(self):
+        """빈 입력값인 경우 마지막 명령어를 실행하는게 기본이나 마지막 명령어 반복을 막기 위해 해당 메서드 재정의"""
+        terminal_clear()
+        self.show_menu()
+        print("Please select a Menu")
+        pass
+
+    def default(self, line):
+        """입력값의 맞는 실행 함수가 없는 경우 실행"""
+        if not self.choice:
+            terminal_clear()
+            print(f"Please select a Menu.\nDoes not exists. [{line}]")
+        pass
+
+    def get_cmd(self, cmd):
+        """기본 규칙인 함수 앞에 do_ 를 붙인 함수명을 반환하지 않도록 커스텀 하기 위한 함수."""
+        find_str = f'[{cmd.upper()}]'
+        word = [i for i in self.description[self.context][self.step].split('\n') if i.find(find_str) != -1]
+        if word == []:
+            return cmd
+
+        cmd = f"cmd{word[0].replace(find_str, '').lower().replace('.', '').replace(' ', '_')}"
+        func_list = self.get_names()
+        for func_name in func_list:
+            if func_name.startswith(cmd):
+                cmd = func_name
+                break
+        return cmd
+
+    def precmd(self, line):
+        terminal_clear()
+        return line
+
+    def onecmd(self, line):
+        """기본 명령 실행 함수."""
+        cmd, arg, line = self.parseline(line)
+        if not line:
+            return self.emptyline()
+        if cmd is None:
+            return self.default(line)
+        self.lastcmd = line
+        if line == 'EOF':
+            self.lastcmd = ''
+        if cmd == '':
+            return self.default(line)
+        else:
+            try:
+                # print(f'{self.get_cmd(cmd)}')
+                func = getattr(self, self.get_cmd(cmd))
+            except AttributeError:
+                return self.default(line)
+            return func(arg)
+
+    def show_menu(self):
+        print(self.get_menu())
+
+    def get_menu(self):
+        return self.description[self.context][self.step]
+
+    def cmd_process_task(self, arg):
+        """[P] Process controll task."""
+        self.prev_context = self.context
+        self.context = 'process task'
+        self.step = 1
+        self.show_menu()
+
+    @load_quit_input
+    def cmd_database_service_start(self, arg):
+        """[D] Database service start."""
+        database.database_start(self.config)
+
+    @load_quit_input
+    def cmd_database_service_shutdown(self, arg):
+        """[F] Database service start."""
+        database.database_shutdown()
+
+    @load_quit_input
+    def cmd_database_service_status(self, arg):
+        """[G] Database service start."""
+        database.database_status()
+
+    @load_quit_input
+    def cmd_web_service_start(self, arg):
+        """[W] Web service start."""
+        server_app.web_start(self.config)
+
+    @load_quit_input
+    def cmd_web_service_shutdown(self, arg):
+        """[E] Web service shutdown."""
+        server_app.web_shutdown()
+
+    @load_quit_input
+    def cmd_web_service_status(self, arg):
+        """[R] Web service status."""
+        server_app.web_status()
+
+    @load_quit_input
+    def cmd_all_service_check(self, arg):
+        """[A] All service check."""
+        print(f'Web service is {"" if server_app.check_service() else "not"} running.')
+        print(f'Database service is {"" if database.check_service() else "not"} running.')
+
+    def cmd_quit(self, arg):
+        if self.context == 'main' and self.step == 1:
+            return self._quit()
+        else:
+            if self.step > 1:
+                self.step -= 1
+            else:
+                self.context = self.prev_context
+
+            terminal_clear()
+            self.show_menu()
+
+    def _quit(self):
+        raise QuitException("bye.")
+
+    def cmdloop(self, intro=None):
+        while True:
+            try:
+                terminal_clear()
+                cmd.Cmd.cmdloop(self, intro)
+            except QuitException as qe:
+                print(f'{qe}')
+                break
+            except KeyboardInterrupt:
+                print('Program Exit...')
+                break
+            except ArgsException as e:
+                print(f"Error parsing arguments!\n {e}")
+                continue
+            except Exception as e:
+                print(f'Unknown Exception : {e}')
+                break
+
+
+if __name__ == '__main__':
+    try:
+        config = Config(parse_command(sys.argv[1:]))
+        if config.options['console']:
+            CommandShell('Admin Console', config).cmdloop()
+
+        elif config.options['web']:
+            server_app.main(config)
+
+        elif config.options['database']:
+            database.main(config)
+
+        else:
+            run_sub_command(config)
+
+    except KeyboardInterrupt:
+        print('Program Exit...')
+        sys.exit(1)
+    except Exception as err:
+        print(f'{err}')
+        # utils.print_stack_trace()

@@ -1,0 +1,654 @@
+[2019-11-07 14:09:50 +0900] [72247] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10f162a70>
+  on_reload: <function OnReload.on_reload at 0x10f162b90>
+  when_ready: <function WhenReady.when_ready at 0x10f162cb0>
+  pre_fork: <function Prefork.pre_fork at 0x10f162dd0>
+  post_fork: <function Postfork.post_fork at 0x10f162ef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10f17b050>
+  worker_int: <function WorkerInt.worker_int at 0x10f17b170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10f17b290>
+  pre_exec: <function PreExec.pre_exec at 0x10f17b3b0>
+  pre_request: <function PreRequest.pre_request at 0x10f17b4d0>
+  post_request: <function PostRequest.post_request at 0x10f17b560>
+  child_exit: <function ChildExit.child_exit at 0x10f17b680>
+  worker_exit: <function WorkerExit.worker_exit at 0x10f17b7a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10f17b8c0>
+  on_exit: <function OnExit.on_exit at 0x10f17b9e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-07 14:09:50 +0900] [72247] [INFO] Starting gunicorn 19.9.0
+[2019-11-07 14:09:50 +0900] [72247] [DEBUG] Arbiter booted
+[2019-11-07 14:09:50 +0900] [72247] [INFO] Listening at: http://0.0.0.0:5000 (72247)
+[2019-11-07 14:09:50 +0900] [72247] [INFO] Using worker: sync
+[2019-11-07 14:09:50 +0900] [72250] [INFO] Booting worker with pid: 72250
+[2019-11-07 14:09:50 +0900] [72260] [INFO] Booting worker with pid: 72260
+[2019-11-07 14:09:51 +0900] [72247] [DEBUG] 2 workers
+[2019-11-07 14:09:51 +0900] [72250] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:09:51 +0900] [72250] [INFO] Worker exiting (pid: 72250)
+[2019-11-07 14:09:51 +0900] [72260] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:09:51 +0900] [72260] [INFO] Worker exiting (pid: 72260)
+[2019-11-07 14:09:51 +0900] [72247] [INFO] Shutting down: Master
+[2019-11-07 14:09:51 +0900] [72247] [INFO] Reason: Worker failed to boot.
+[2019-11-07 14:11:29 +0900] [73035] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x101dc3a70>
+  on_reload: <function OnReload.on_reload at 0x101dc3b90>
+  when_ready: <function WhenReady.when_ready at 0x101dc3cb0>
+  pre_fork: <function Prefork.pre_fork at 0x101dc3dd0>
+  post_fork: <function Postfork.post_fork at 0x101dc3ef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x101ddb050>
+  worker_int: <function WorkerInt.worker_int at 0x101ddb170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x101ddb290>
+  pre_exec: <function PreExec.pre_exec at 0x101ddb3b0>
+  pre_request: <function PreRequest.pre_request at 0x101ddb4d0>
+  post_request: <function PostRequest.post_request at 0x101ddb560>
+  child_exit: <function ChildExit.child_exit at 0x101ddb680>
+  worker_exit: <function WorkerExit.worker_exit at 0x101ddb7a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x101ddb8c0>
+  on_exit: <function OnExit.on_exit at 0x101ddb9e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-07 14:11:29 +0900] [73035] [INFO] Starting gunicorn 19.9.0
+[2019-11-07 14:11:29 +0900] [73035] [DEBUG] Arbiter booted
+[2019-11-07 14:11:29 +0900] [73035] [INFO] Listening at: http://0.0.0.0:5000 (73035)
+[2019-11-07 14:11:29 +0900] [73035] [INFO] Using worker: sync
+[2019-11-07 14:11:29 +0900] [73038] [INFO] Booting worker with pid: 73038
+[2019-11-07 14:11:29 +0900] [73050] [INFO] Booting worker with pid: 73050
+[2019-11-07 14:11:29 +0900] [73035] [DEBUG] 2 workers
+[2019-11-07 14:11:29 +0900] [73038] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:11:29 +0900] [73038] [INFO] Worker exiting (pid: 73038)
+[2019-11-07 14:11:29 +0900] [73050] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:11:29 +0900] [73050] [INFO] Worker exiting (pid: 73050)
+[2019-11-07 14:11:29 +0900] [73035] [INFO] Shutting down: Master
+[2019-11-07 14:11:29 +0900] [73035] [INFO] Reason: Worker failed to boot.
+[2019-11-07 14:12:17 +0900] [73352] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10c9ffa70>
+  on_reload: <function OnReload.on_reload at 0x10c9ffb90>
+  when_ready: <function WhenReady.when_ready at 0x10c9ffcb0>
+  pre_fork: <function Prefork.pre_fork at 0x10c9ffdd0>
+  post_fork: <function Postfork.post_fork at 0x10c9ffef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10ca17050>
+  worker_int: <function WorkerInt.worker_int at 0x10ca17170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10ca17290>
+  pre_exec: <function PreExec.pre_exec at 0x10ca173b0>
+  pre_request: <function PreRequest.pre_request at 0x10ca174d0>
+  post_request: <function PostRequest.post_request at 0x10ca17560>
+  child_exit: <function ChildExit.child_exit at 0x10ca17680>
+  worker_exit: <function WorkerExit.worker_exit at 0x10ca177a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10ca178c0>
+  on_exit: <function OnExit.on_exit at 0x10ca179e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-07 14:12:17 +0900] [73352] [INFO] Starting gunicorn 19.9.0
+[2019-11-07 14:12:17 +0900] [73352] [DEBUG] Arbiter booted
+[2019-11-07 14:12:17 +0900] [73352] [INFO] Listening at: http://0.0.0.0:5000 (73352)
+[2019-11-07 14:12:17 +0900] [73352] [INFO] Using worker: sync
+[2019-11-07 14:12:17 +0900] [73355] [INFO] Booting worker with pid: 73355
+[2019-11-07 14:12:17 +0900] [73357] [INFO] Booting worker with pid: 73357
+[2019-11-07 14:12:17 +0900] [73352] [DEBUG] 2 workers
+[2019-11-07 14:12:18 +0900] [73355] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:12:18 +0900] [73355] [INFO] Worker exiting (pid: 73355)
+[2019-11-07 14:12:18 +0900] [73357] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:12:18 +0900] [73357] [INFO] Worker exiting (pid: 73357)
+[2019-11-07 14:12:18 +0900] [73352] [INFO] Shutting down: Master
+[2019-11-07 14:12:18 +0900] [73352] [INFO] Reason: Worker failed to boot.
+[2019-11-07 14:12:36 +0900] [73447] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10fb9fa70>
+  on_reload: <function OnReload.on_reload at 0x10fb9fb90>
+  when_ready: <function WhenReady.when_ready at 0x10fb9fcb0>
+  pre_fork: <function Prefork.pre_fork at 0x10fb9fdd0>
+  post_fork: <function Postfork.post_fork at 0x10fb9fef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10fbb7050>
+  worker_int: <function WorkerInt.worker_int at 0x10fbb7170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10fbb7290>
+  pre_exec: <function PreExec.pre_exec at 0x10fbb73b0>
+  pre_request: <function PreRequest.pre_request at 0x10fbb74d0>
+  post_request: <function PostRequest.post_request at 0x10fbb7560>
+  child_exit: <function ChildExit.child_exit at 0x10fbb7680>
+  worker_exit: <function WorkerExit.worker_exit at 0x10fbb77a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10fbb78c0>
+  on_exit: <function OnExit.on_exit at 0x10fbb79e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-07 14:12:36 +0900] [73447] [INFO] Starting gunicorn 19.9.0
+[2019-11-07 14:12:36 +0900] [73447] [DEBUG] Arbiter booted
+[2019-11-07 14:12:36 +0900] [73447] [INFO] Listening at: http://0.0.0.0:5000 (73447)
+[2019-11-07 14:12:36 +0900] [73447] [INFO] Using worker: sync
+[2019-11-07 14:12:36 +0900] [73450] [INFO] Booting worker with pid: 73450
+[2019-11-07 14:12:36 +0900] [73451] [INFO] Booting worker with pid: 73451
+[2019-11-07 14:12:36 +0900] [73447] [DEBUG] 2 workers
+[2019-11-07 14:12:36 +0900] [73451] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:12:36 +0900] [73451] [INFO] Worker exiting (pid: 73451)
+[2019-11-07 14:12:36 +0900] [73450] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 362, in import_app
+    app = eval(obj, vars(mod))
+  File "<string>", line 1, in <module>
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 36, in create_app
+    web_init(app, options)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 24, in web_init
+    logger_init(__name__, level='DEBUG', logger=app.logger())
+TypeError: 'Logger' object is not callable
+[2019-11-07 14:12:36 +0900] [73450] [INFO] Worker exiting (pid: 73450)
+[2019-11-07 14:12:37 +0900] [73447] [INFO] Shutting down: Master
+[2019-11-07 14:12:37 +0900] [73447] [INFO] Reason: Worker failed to boot.
+[2019-11-07 14:13:13 +0900] [73479] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x108ddea70>
+  on_reload: <function OnReload.on_reload at 0x108ddeb90>
+  when_ready: <function WhenReady.when_ready at 0x108ddecb0>
+  pre_fork: <function Prefork.pre_fork at 0x108ddedd0>
+  post_fork: <function Postfork.post_fork at 0x108ddeef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x108df6050>
+  worker_int: <function WorkerInt.worker_int at 0x108df6170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x108df6290>
+  pre_exec: <function PreExec.pre_exec at 0x108df63b0>
+  pre_request: <function PreRequest.pre_request at 0x108df64d0>
+  post_request: <function PostRequest.post_request at 0x108df6560>
+  child_exit: <function ChildExit.child_exit at 0x108df6680>
+  worker_exit: <function WorkerExit.worker_exit at 0x108df67a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x108df68c0>
+  on_exit: <function OnExit.on_exit at 0x108df69e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-07 14:13:13 +0900] [73479] [INFO] Starting gunicorn 19.9.0
+[2019-11-07 14:13:13 +0900] [73479] [DEBUG] Arbiter booted
+[2019-11-07 14:13:13 +0900] [73479] [INFO] Listening at: http://0.0.0.0:5000 (73479)
+[2019-11-07 14:13:13 +0900] [73479] [INFO] Using worker: sync
+[2019-11-07 14:13:13 +0900] [73482] [INFO] Booting worker with pid: 73482
+[2019-11-07 14:13:13 +0900] [73483] [INFO] Booting worker with pid: 73483
+[2019-11-07 14:13:13 +0900] [73479] [DEBUG] 2 workers
+[2019-11-07 14:13:21 +0900] [73483] [DEBUG] GET /health_check
+[2019-11-07 14:13:21 +0900] [73483] [DEBUG] GET /favicon.ico
+[2019-11-07 14:14:42 +0900] [73483] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/base.py modified
+[2019-11-07 14:14:42 +0900] [73482] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/base.py modified
+[2019-11-07 14:14:51 +0900] [73482] [INFO] Worker exiting (pid: 73482)
+[2019-11-07 14:14:51 +0900] [73523] [INFO] Booting worker with pid: 73523
+[2019-11-07 14:14:51 +0900] [73483] [INFO] Worker exiting (pid: 73483)
+[2019-11-07 14:14:51 +0900] [73524] [INFO] Booting worker with pid: 73524
+[2019-11-07 14:14:53 +0900] [73524] [DEBUG] GET /health_check
+[2019-11-07 14:14:56 +0900] [73523] [DEBUG] GET /check
+[2019-11-07 14:15:07 +0900] [73524] [DEBUG] Closing connection. 
+[2019-11-07 14:26:39 +0900] [73524] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-07 14:26:40 +0900] [73523] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-07 14:26:41 +0900] [73523] [INFO] Worker exiting (pid: 73523)
+[2019-11-07 14:26:41 +0900] [73822] [INFO] Booting worker with pid: 73822
+[2019-11-07 14:26:52 +0900] [73524] [INFO] Worker exiting (pid: 73524)
+[2019-11-07 14:26:52 +0900] [73823] [INFO] Booting worker with pid: 73823

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block header %}
+<p>섹션 헤더</p>
+{% endblock %}
+{% block content %}
+<div>
+    <p>{{ message }}</p>
+
+    <p>{{ contacts }}</p>
+    <p>My Contacts:</p>
+    <ul>
+        {% for contact in contacts %}
+        <li>{{ contact }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
