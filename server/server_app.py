@@ -4,19 +4,21 @@ import os
 import datetime
 import importlib
 import signal
+import multiprocessing
 
 # 3rd party libs
 import psutil
 from flask import Flask
+from gevent import monkey
 from gevent.pywsgi import WSGIServer
 
 # custom develop libs
 from server.exceptions import ProcessException
 from server.database import database_init
-from server.common.utils import logger_init
 
 
 def web_init(app, options):
+    app.config['SECRET_KEY'] = os.urandom(24)
     if options['--debug']:
         app.jinja_env.auto_reload = options['--debug']
         app.debug = options['--debug']
@@ -67,19 +69,22 @@ def web_start(config):
     if not os.access(f'{config.LOGGING_DIR}', os.W_OK):
         os.chmod(f'{config.LOGGING_DIR}', 0o777)
 
-    cmd = ' '.join(['gunicorn',
-                    '--name=flask_app',
-                    f'--chdir={config.WORK_DIR}',
-                    f'\'{__name__}:create_app({{"--debug": {config.options["--debug"]} }})\'',
-                    f'--bind=0.0.0.0:{config.options["server"]["port"]}',
-                    '--daemon',
-                    '--workers=2',
-                    f'--log-level={config.options["logging"]["level"]}',
-                    f'--access-logfile="{config.LOGGING_DIR}/web_access.log"',
-                    f'--error-logfile="{config.LOGGING_DIR}/web_error.log"',
-                    '--reload' if config.options["--debug"] else ''])
-    print(cmd)
-    os.system(cmd)
+    if config.options['--dev']:
+        create_app(config.options).run()
+    else:
+        cmd = ' '.join(['gunicorn',
+                        '--name=flask_app',
+                        f'--chdir={config.WORK_DIR}',
+                        f'\'{__name__}:create_app({{"--debug": {config.options["--debug"]} }})\'',
+                        f'--bind=0.0.0.0:{config.options["server"]["port"]}',
+                        '--daemon',
+                        f'--workers=2',
+                        f'--log-level={config.options["logging"]["level"]}',
+                        f'--access-logfile="{config.LOGGING_DIR}/web_access.log"',
+                        f'--error-logfile="{config.LOGGING_DIR}/web_error.log"',
+                        '--reload' if config.options["--debug"] else ''])
+        print(cmd)
+        os.system(cmd)
 
 
 def web_shutdown():

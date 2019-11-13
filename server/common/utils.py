@@ -4,6 +4,7 @@ import linecache
 import traceback
 import logging
 import colorlog
+from passlib.hash import pbkdf2_sha256
 
 
 def print_stack_trace():
@@ -28,3 +29,17 @@ def logger_init(module_name='', level='INFO', logger=None):
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     return logger
+
+
+def get_request_data(request):
+    if request.data == b'':
+        return None
+    return request.get_json()
+
+
+def hash_password(password):
+    return pbkdf2_sha256.encrypt(password, rounds=200000, salt_size=16)
+
+
+def verify_password(password, _hash):
+    return pbkdf2_sha256.verify(password, _hash)

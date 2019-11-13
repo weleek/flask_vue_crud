@@ -652,3 +652,1301 @@ TypeError: 'Logger' object is not callable
 [2019-11-07 14:26:41 +0900] [73822] [INFO] Booting worker with pid: 73822
 [2019-11-07 14:26:52 +0900] [73524] [INFO] Worker exiting (pid: 73524)
 [2019-11-07 14:26:52 +0900] [73823] [INFO] Booting worker with pid: 73823
+[2019-11-07 18:13:14 +0900] [73822] [DEBUG] GET /
+[2019-11-07 18:13:15 +0900] [73822] [DEBUG] GET /favicon.ico
+[2019-11-08 09:36:43 +0900] [73822] [INFO] Worker exiting (pid: 73822)
+[2019-11-08 09:36:43 +0900] [73479] [INFO] Handling signal: term
+[2019-11-08 09:36:43 +0900] [73823] [INFO] Worker exiting (pid: 73823)
+[2019-11-08 09:36:43 +0900] [73479] [INFO] Shutting down: Master
+[2019-11-08 09:56:57 +0900] [1664] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x1078f1a70>
+  on_reload: <function OnReload.on_reload at 0x1078f1b90>
+  when_ready: <function WhenReady.when_ready at 0x1078f1cb0>
+  pre_fork: <function Prefork.pre_fork at 0x1078f1dd0>
+  post_fork: <function Postfork.post_fork at 0x1078f1ef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10790a050>
+  worker_int: <function WorkerInt.worker_int at 0x10790a170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10790a290>
+  pre_exec: <function PreExec.pre_exec at 0x10790a3b0>
+  pre_request: <function PreRequest.pre_request at 0x10790a4d0>
+  post_request: <function PostRequest.post_request at 0x10790a560>
+  child_exit: <function ChildExit.child_exit at 0x10790a680>
+  worker_exit: <function WorkerExit.worker_exit at 0x10790a7a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10790a8c0>
+  on_exit: <function OnExit.on_exit at 0x10790a9e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-08 09:56:57 +0900] [1664] [INFO] Starting gunicorn 19.9.0
+[2019-11-08 09:56:57 +0900] [1664] [DEBUG] Arbiter booted
+[2019-11-08 09:56:57 +0900] [1664] [INFO] Listening at: http://0.0.0.0:5000 (1664)
+[2019-11-08 09:56:57 +0900] [1664] [INFO] Using worker: sync
+[2019-11-08 09:56:57 +0900] [1667] [INFO] Booting worker with pid: 1667
+[2019-11-08 09:56:57 +0900] [1668] [INFO] Booting worker with pid: 1668
+[2019-11-08 09:56:57 +0900] [1664] [DEBUG] 2 workers
+[2019-11-08 09:57:30 +0900] [1667] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/base.py modified
+[2019-11-08 09:57:30 +0900] [1668] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/base.py modified
+[2019-11-08 09:57:42 +0900] [1667] [INFO] Worker exiting (pid: 1667)
+[2019-11-08 09:57:42 +0900] [1668] [INFO] Worker exiting (pid: 1668)
+[2019-11-08 09:57:42 +0900] [1721] [INFO] Booting worker with pid: 1721
+[2019-11-08 09:57:42 +0900] [1664] [DEBUG] 1 workers
+[2019-11-08 09:57:42 +0900] [1722] [INFO] Booting worker with pid: 1722
+[2019-11-08 09:57:43 +0900] [1664] [DEBUG] 2 workers
+[2019-11-08 09:58:47 +0900] [1721] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-08 09:58:47 +0900] [1722] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-08 09:58:58 +0900] [1721] [INFO] Worker exiting (pid: 1721)
+[2019-11-08 09:58:58 +0900] [1722] [INFO] Worker exiting (pid: 1722)
+[2019-11-08 09:58:58 +0900] [1737] [INFO] Booting worker with pid: 1737
+[2019-11-08 09:58:58 +0900] [1737] [ERROR] unexpected EOF while parsing (<fstring>, line 1)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "<fstring>", line 1
+    (multiprocessing.process.)
+                             ^
+SyntaxError: unexpected EOF while parsing
+[2019-11-08 09:58:58 +0900] [1664] [DEBUG] 1 workers
+[2019-11-08 09:58:58 +0900] [1738] [INFO] Booting worker with pid: 1738
+[2019-11-08 09:58:58 +0900] [1738] [ERROR] unexpected EOF while parsing (<fstring>, line 1)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "<fstring>", line 1
+    (multiprocessing.process.)
+                             ^
+SyntaxError: unexpected EOF while parsing
+[2019-11-08 09:58:58 +0900] [1664] [DEBUG] 2 workers
+[2019-11-08 10:13:18 +0900] [1737] [DEBUG] Closing connection. 
+[2019-11-08 10:15:51 +0900] [1737] [INFO] Worker exiting (pid: 1737)
+[2019-11-08 10:15:51 +0900] [1738] [INFO] Worker exiting (pid: 1738)
+[2019-11-08 10:15:51 +0900] [1664] [INFO] Handling signal: term
+[2019-11-08 10:15:51 +0900] [1664] [INFO] Shutting down: Master
+[2019-11-08 10:15:54 +0900] [2160] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10a66ba70>
+  on_reload: <function OnReload.on_reload at 0x10a66bb90>
+  when_ready: <function WhenReady.when_ready at 0x10a66bcb0>
+  pre_fork: <function Prefork.pre_fork at 0x10a66bdd0>
+  post_fork: <function Postfork.post_fork at 0x10a66bef0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10a684050>
+  worker_int: <function WorkerInt.worker_int at 0x10a684170>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10a684290>
+  pre_exec: <function PreExec.pre_exec at 0x10a6843b0>
+  pre_request: <function PreRequest.pre_request at 0x10a6844d0>
+  post_request: <function PostRequest.post_request at 0x10a684560>
+  child_exit: <function ChildExit.child_exit at 0x10a684680>
+  worker_exit: <function WorkerExit.worker_exit at 0x10a6847a0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10a6848c0>
+  on_exit: <function OnExit.on_exit at 0x10a6849e0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-08 10:15:54 +0900] [2160] [INFO] Starting gunicorn 19.9.0
+[2019-11-08 10:15:54 +0900] [2160] [DEBUG] Arbiter booted
+[2019-11-08 10:15:54 +0900] [2160] [INFO] Listening at: http://0.0.0.0:5000 (2160)
+[2019-11-08 10:15:54 +0900] [2160] [INFO] Using worker: sync
+[2019-11-08 10:15:54 +0900] [2163] [INFO] Booting worker with pid: 2163
+[2019-11-08 10:15:54 +0900] [2167] [INFO] Booting worker with pid: 2167
+[2019-11-08 10:15:54 +0900] [2160] [DEBUG] 2 workers
+[2019-11-08 10:16:05 +0900] [2163] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-08 10:16:05 +0900] [2167] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-08 10:16:09 +0900] [2163] [INFO] Worker exiting (pid: 2163)
+[2019-11-08 10:16:09 +0900] [2167] [INFO] Worker exiting (pid: 2167)
+[2019-11-08 10:16:09 +0900] [2190] [INFO] Booting worker with pid: 2190
+[2019-11-08 10:16:09 +0900] [2191] [INFO] Booting worker with pid: 2191
+[2019-11-08 17:14:09 +0900] [2160] [INFO] Handling signal: term
+[2019-11-08 17:14:09 +0900] [2190] [INFO] Worker exiting (pid: 2190)
+[2019-11-08 17:14:09 +0900] [2191] [INFO] Worker exiting (pid: 2191)
+[2019-11-08 17:14:09 +0900] [2160] [INFO] Shutting down: Master
+[2019-11-11 15:35:40 +0900] [7774] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10e5fed40>
+  on_reload: <function OnReload.on_reload at 0x10e5fee60>
+  when_ready: <function WhenReady.when_ready at 0x10e5fef80>
+  pre_fork: <function Prefork.pre_fork at 0x10e6140e0>
+  post_fork: <function Postfork.post_fork at 0x10e614200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10e614320>
+  worker_int: <function WorkerInt.worker_int at 0x10e614440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10e614560>
+  pre_exec: <function PreExec.pre_exec at 0x10e614680>
+  pre_request: <function PreRequest.pre_request at 0x10e6147a0>
+  post_request: <function PostRequest.post_request at 0x10e614830>
+  child_exit: <function ChildExit.child_exit at 0x10e614950>
+  worker_exit: <function WorkerExit.worker_exit at 0x10e614a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10e614b90>
+  on_exit: <function OnExit.on_exit at 0x10e614cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 15:35:40 +0900] [7774] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 15:35:40 +0900] [7774] [DEBUG] Arbiter booted
+[2019-11-11 15:35:40 +0900] [7774] [INFO] Listening at: http://0.0.0.0:5000 (7774)
+[2019-11-11 15:35:40 +0900] [7774] [INFO] Using worker: sync
+[2019-11-11 15:35:40 +0900] [7777] [INFO] Booting worker with pid: 7777
+[2019-11-11 15:35:40 +0900] [7812] [INFO] Booting worker with pid: 7812
+[2019-11-11 15:35:40 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 15:36:01 +0900] [7812] [DEBUG] GET /auth/login
+[2019-11-11 15:36:01 +0900] [7777] [DEBUG] GET /favicon.ico
+[2019-11-11 15:37:12 +0900] [7777] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\xac\xbf\xd5\x01o\x8d\x82\x8d\xc9\rmy\x11\x8f\xa1M\xb3_\xc6R0\x18On2K\x1c1\x92\xc5\xea\xe3 \xb6\xf1\xb2\x00Q\x99\x87k\x0f\x16rV\xb3\x14\x82\x95\x99\x106\xdb\x00\x12\x81\xf0N8\xc1\x8f\xef\xbfWD\x00"\x9a\x9a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x00\n\x01\x00\x01\x91\xca\xca\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\n\x00\x08\xca\xca\x00\x1d\x00\x17\x00\x18\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)\xca\xca\x00\x01\x00\x00\x1d\x00 \xe6H\x18\xef\x95\xb5G\x93\x93/\xd5aA\xf9\xc2\xfb\x94\xf1\x84V%\x8f.]\x83\xe7\xa4\xda5\x95\xec^\x00-\x00\x02\x01\x01\x00+\x00\x0b\n**\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x02::\x00\x01\x00\x00\x15\x00\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2019-11-11 15:37:26 +0900] [7777] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:37:26 +0900] [7812] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:37:27 +0900] [7777] [INFO] Worker exiting (pid: 7777)
+[2019-11-11 15:37:27 +0900] [7858] [INFO] Booting worker with pid: 7858
+[2019-11-11 15:37:31 +0900] [7812] [INFO] Worker exiting (pid: 7812)
+[2019-11-11 15:37:31 +0900] [7861] [INFO] Booting worker with pid: 7861
+[2019-11-11 15:38:06 +0900] [7861] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03p<\x10\x8b\x99\x03\xebl\xd1\xe9\xc4\xcc7\x0e2\xe4\x15\xa4\x81\x15\xefv\xcd\x91t\x9b\xcc\xc7<\xbe/\xa9 \x85\x99u\x89\xe4\xb1\x91]s`\x97\xd0\xb2z\x0b&Q\x15\xc6\xf5\xf8[\x93\x12\xae\x02v\xf2+\xf4\xd6\x8c\x00"\xfa\xfa\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x00\n\x01\x00\x01\x91zz\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\n\x00\x08\x8a\x8a\x00\x1d\x00\x17\x00\x18\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)\x8a\x8a\x00\x01\x00\x00\x1d\x00 \x85\xf5\xee\xe9(0\xcd\x92\xcc\xd7xP \t\x0b]\xd1#\x8d.\t\xd6\t&\xec-\xbe\xfetU\x93=\x00-\x00\x02\x01\x01\x00+\x00\x0b\n\xba\xba\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x02\x1a\x1a\x00\x01\x00\x00\x15\x00\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2019-11-11 15:38:12 +0900] [7861] [DEBUG] POST /health_check
+[2019-11-11 15:38:25 +0900] [7861] [DEBUG] POST /auth/login
+[2019-11-11 15:38:30 +0900] [7858] [DEBUG] Ignored premature client disconnection. No more data after: b'\x16\x03\x01\x02\x00\x01\x00\x01\xfc\x03\x03\x85\xfbk\xf3\xa4\xe6\xbe\x18\xdc`V\xff\x7fWy7\xebE%\xa6\x03\xf3\x86\xa3\xf2{\xaa\xf6u\xa5 ` \x08~\xach\x9b\xccy\x84\xf3\xddS\xcem\xded\x9fd2(Z\x8b\x00\x9a\x99t\xff%\x12\xd4n\xdc:\x00"\x8a\x8a\x13\x01\x13\x02\x13\x03\xc0+\xc0/\xc0,\xc00\xcc\xa9\xcc\xa8\xc0\x13\xc0\x14\x00\x9c\x00\x9d\x00/\x005\x00\n\x01\x00\x01\x91::\x00\x00\x00\x00\x00\x0e\x00\x0c\x00\x00\tlocalhost\x00\x17\x00\x00\xff\x01\x00\x01\x00\x00\n\x00\n\x00\x08JJ\x00\x1d\x00\x17\x00\x18\x00\x0b\x00\x02\x01\x00\x00#\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\r\x00\x14\x00\x12\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x02\x01\x00\x12\x00\x00\x003\x00+\x00)JJ\x00\x01\x00\x00\x1d\x00 ~\xd3\x0e\t\xb7\xdb\xc6\xe9R\xd9x-3S\xb3Y\xd0[P\x19\x01Z\x99G\xde\xa4\xed\xf9\xc4\x9f\x96{\x00-\x00\x02\x01\x01\x00+\x00\x0b\n\xaa\xaa\x03\x04\x03\x03\x03\x02\x03\x01\x00\x1b\x00\x03\x02\x00\x02zz\x00\x01\x00\x00\x15\x00\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'
+[2019-11-11 15:38:32 +0900] [7861] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:38:32 +0900] [7858] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:38:37 +0900] [7858] [INFO] Worker exiting (pid: 7858)
+[2019-11-11 15:38:37 +0900] [7861] [INFO] Worker exiting (pid: 7861)
+[2019-11-11 15:38:37 +0900] [7866] [INFO] Booting worker with pid: 7866
+[2019-11-11 15:38:37 +0900] [7867] [INFO] Booting worker with pid: 7867
+[2019-11-11 15:38:37 +0900] [7866] [DEBUG] POST /auth/login
+[2019-11-11 15:39:04 +0900] [7866] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:39:05 +0900] [7867] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:39:07 +0900] [7866] [INFO] Worker exiting (pid: 7866)
+[2019-11-11 15:39:08 +0900] [7874] [INFO] Booting worker with pid: 7874
+[2019-11-11 15:39:08 +0900] [7867] [INFO] Worker exiting (pid: 7867)
+[2019-11-11 15:39:08 +0900] [7875] [INFO] Booting worker with pid: 7875
+[2019-11-11 15:39:10 +0900] [7875] [DEBUG] POST /auth/login
+[2019-11-11 15:39:12 +0900] [7874] [DEBUG] POST /auth/login
+[2019-11-11 15:39:12 +0900] [7874] [DEBUG] POST /auth/login
+[2019-11-11 15:39:13 +0900] [7874] [DEBUG] POST /auth/login
+[2019-11-11 15:40:35 +0900] [7874] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:40:35 +0900] [7875] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:40:43 +0900] [7875] [INFO] Worker exiting (pid: 7875)
+[2019-11-11 15:40:43 +0900] [7874] [INFO] Worker exiting (pid: 7874)
+[2019-11-11 15:40:43 +0900] [7884] [INFO] Booting worker with pid: 7884
+[2019-11-11 15:40:43 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 15:40:43 +0900] [7885] [INFO] Booting worker with pid: 7885
+[2019-11-11 15:40:43 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 15:40:46 +0900] [7885] [DEBUG] POST /auth/login
+[2019-11-11 15:40:46 +0900] [7885] [ERROR] Error handling request /auth/login
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 12, in login
+    app.logger.info(f'<<{request.form}>>')
+AttributeError: 'Blueprint' object has no attribute 'logger'
+[2019-11-11 15:42:25 +0900] [7884] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:42:25 +0900] [7885] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:42:31 +0900] [7884] [INFO] Worker exiting (pid: 7884)
+[2019-11-11 15:42:31 +0900] [7885] [INFO] Worker exiting (pid: 7885)
+[2019-11-11 15:42:31 +0900] [7895] [INFO] Booting worker with pid: 7895
+[2019-11-11 15:42:31 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 15:42:31 +0900] [7896] [INFO] Booting worker with pid: 7896
+[2019-11-11 15:42:31 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 15:42:33 +0900] [7895] [DEBUG] POST /auth/login
+[2019-11-11 15:42:33,441] INFO in auth: <<ImmutableMultiDict([])>>
+[2019-11-11 15:42:52 +0900] [7895] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:42:52 +0900] [7896] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:43:03 +0900] [7896] [INFO] Worker exiting (pid: 7896)
+[2019-11-11 15:43:03 +0900] [7895] [INFO] Worker exiting (pid: 7895)
+[2019-11-11 15:43:03 +0900] [7899] [INFO] Booting worker with pid: 7899
+[2019-11-11 15:43:03 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 15:43:03 +0900] [7900] [INFO] Booting worker with pid: 7900
+[2019-11-11 15:43:03 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 15:43:42 +0900] [7899] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:43:42 +0900] [7900] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:43:48 +0900] [7899] [INFO] Worker exiting (pid: 7899)
+[2019-11-11 15:43:48 +0900] [7908] [INFO] Booting worker with pid: 7908
+[2019-11-11 15:43:48 +0900] [7900] [INFO] Worker exiting (pid: 7900)
+[2019-11-11 15:43:48 +0900] [7909] [INFO] Booting worker with pid: 7909
+[2019-11-11 15:43:50 +0900] [7909] [DEBUG] POST /auth/login
+[2019-11-11 15:43:50 +0900] [7909] [ERROR] Error handling request /auth/login
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 12, in login
+    current_app.logger.info(f'{request.form["test"]}')
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/werkzeug/datastructures.py", line 443, in __getitem__
+    raise exceptions.BadRequestKeyError(key)
+werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+[2019-11-11 15:44:45 +0900] [7908] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:44:45 +0900] [7909] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 15:44:50 +0900] [7908] [INFO] Worker exiting (pid: 7908)
+[2019-11-11 15:44:50 +0900] [7909] [INFO] Worker exiting (pid: 7909)
+[2019-11-11 15:44:50 +0900] [7913] [INFO] Booting worker with pid: 7913
+[2019-11-11 15:44:50 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 15:44:50 +0900] [7914] [INFO] Booting worker with pid: 7914
+[2019-11-11 15:44:50 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:08:39 +0900] [7914] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:08:39 +0900] [7913] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:08:43 +0900] [7914] [INFO] Worker exiting (pid: 7914)
+[2019-11-11 16:08:43 +0900] [7913] [INFO] Worker exiting (pid: 7913)
+[2019-11-11 16:08:43 +0900] [8352] [INFO] Booting worker with pid: 8352
+[2019-11-11 16:08:43 +0900] [8353] [INFO] Booting worker with pid: 8353
+[2019-11-11 16:08:44 +0900] [8352] [DEBUG] POST /auth/login
+[2019-11-11 16:08:44,070] INFO in auth: {'test': 'test11'}
+[2019-11-11 16:09:31 +0900] [8352] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:09:31 +0900] [8353] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:09:44 +0900] [8353] [INFO] Worker exiting (pid: 8353)
+[2019-11-11 16:09:44 +0900] [8352] [INFO] Worker exiting (pid: 8352)
+[2019-11-11 16:09:44 +0900] [8362] [INFO] Booting worker with pid: 8362
+[2019-11-11 16:09:44 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:09:44 +0900] [8363] [INFO] Booting worker with pid: 8363
+[2019-11-11 16:09:44 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:09:52 +0900] [8363] [DEBUG] POST /auth/login
+[2019-11-11 16:09:52,980] INFO in auth: {'test': 'test11'}
+[2019-11-11 16:09:53 +0900] [8363] [DEBUG] POST /auth/login
+[2019-11-11 16:09:53,086] INFO in auth: {'test': 'test11'}
+[2019-11-11 16:09:56 +0900] [8363] [DEBUG] POST /auth/login
+[2019-11-11 16:10:07 +0900] [8363] [DEBUG] POST /auth/login
+[2019-11-11 16:10:07,853] INFO in auth: {}
+[2019-11-11 16:10:14 +0900] [8363] [DEBUG] POST /auth/login
+[2019-11-11 16:12:42 +0900] [8362] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:12:42 +0900] [8363] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:12:44 +0900] [8362] [INFO] Worker exiting (pid: 8362)
+[2019-11-11 16:12:44 +0900] [8363] [INFO] Worker exiting (pid: 8363)
+[2019-11-11 16:12:44 +0900] [8398] [INFO] Booting worker with pid: 8398
+[2019-11-11 16:12:44 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:12:44 +0900] [8399] [INFO] Booting worker with pid: 8399
+[2019-11-11 16:12:44 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:14:18 +0900] [8398] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:14:18 +0900] [8399] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:14:29 +0900] [8398] [INFO] Worker exiting (pid: 8398)
+[2019-11-11 16:14:29 +0900] [8399] [INFO] Worker exiting (pid: 8399)
+[2019-11-11 16:14:29 +0900] [8411] [INFO] Booting worker with pid: 8411
+[2019-11-11 16:14:30 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:14:30 +0900] [8412] [INFO] Booting worker with pid: 8412
+[2019-11-11 16:14:30 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:14:39 +0900] [8412] [DEBUG] POST /auth/login
+[2019-11-11 16:14:39,492] INFO in auth: {'TEST': '111'}
+[2019-11-11 16:14:39,492] INFO in auth: b'{\n  "TEST":"111"\n}\n'
+[2019-11-11 16:14:48 +0900] [8412] [DEBUG] POST /auth/login
+[2019-11-11 16:14:48,918] ERROR in auth: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 74, in get_json
+    rv = json.loads(data)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/json/__init__.py", line 205, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 13, in login
+    data = request.get_json()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 82, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 106, in on_json_loading_failed
+    raise BadRequest('Failed to decode JSON object: {0}'.format(e))
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+[2019-11-11 16:15:08 +0900] [8411] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:15:08 +0900] [8412] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:15:17 +0900] [8412] [INFO] Worker exiting (pid: 8412)
+[2019-11-11 16:15:17 +0900] [8411] [INFO] Worker exiting (pid: 8411)
+[2019-11-11 16:15:17 +0900] [8418] [INFO] Booting worker with pid: 8418
+[2019-11-11 16:15:17 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:15:17 +0900] [8419] [INFO] Booting worker with pid: 8419
+[2019-11-11 16:15:17 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:15:17 +0900] [8418] [DEBUG] POST /auth/login
+[2019-11-11 16:15:17,787] INFO in auth: b''
+[2019-11-11 16:15:17,787] ERROR in auth: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 74, in get_json
+    rv = json.loads(data)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/json/__init__.py", line 205, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 14, in login
+    data = request.get_json()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 82, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 106, in on_json_loading_failed
+    raise BadRequest('Failed to decode JSON object: {0}'.format(e))
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+[2019-11-11 16:17:07 +0900] [8418] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:17:07 +0900] [8419] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:17:17 +0900] [8419] [INFO] Worker exiting (pid: 8419)
+[2019-11-11 16:17:17 +0900] [8418] [INFO] Worker exiting (pid: 8418)
+[2019-11-11 16:17:17 +0900] [8447] [INFO] Booting worker with pid: 8447
+[2019-11-11 16:17:17 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:17:17 +0900] [8448] [INFO] Booting worker with pid: 8448
+[2019-11-11 16:17:17 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:17:24 +0900] [8448] [DEBUG] POST /auth/login
+[2019-11-11 16:17:24,869] INFO in auth: {'test': '11'}
+[2019-11-11 16:17:28 +0900] [8447] [DEBUG] POST /auth/login
+[2019-11-11 16:18:30 +0900] [8447] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py modified
+[2019-11-11 16:18:30 +0900] [8448] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py modified
+[2019-11-11 16:18:43 +0900] [8448] [INFO] Worker exiting (pid: 8448)
+[2019-11-11 16:18:43 +0900] [8447] [INFO] Worker exiting (pid: 8447)
+[2019-11-11 16:18:43 +0900] [8458] [INFO] Booting worker with pid: 8458
+[2019-11-11 16:18:43 +0900] [8459] [INFO] Booting worker with pid: 8459
+[2019-11-11 16:18:44 +0900] [8458] [ERROR] expected an indented block (utils.py, line 38)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 17, in <module>
+    from server.common.utils import logger_init
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py", line 38
+    def hash_password(password):
+      ^
+IndentationError: expected an indented block
+[2019-11-11 16:18:44 +0900] [8459] [ERROR] expected an indented block (utils.py, line 38)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/server_app.py", line 17, in <module>
+    from server.common.utils import logger_init
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py", line 38
+    def hash_password(password):
+      ^
+IndentationError: expected an indented block
+[2019-11-11 16:44:09 +0900] [8459] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py modified
+[2019-11-11 16:44:09 +0900] [8458] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py modified
+[2019-11-11 16:44:14 +0900] [8458] [INFO] Worker exiting (pid: 8458)
+[2019-11-11 16:44:14 +0900] [8459] [INFO] Worker exiting (pid: 8459)
+[2019-11-11 16:44:14 +0900] [8540] [INFO] Booting worker with pid: 8540
+[2019-11-11 16:44:14 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:44:14 +0900] [8541] [INFO] Booting worker with pid: 8541
+[2019-11-11 16:44:14 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:44:47 +0900] [8540] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:44:47 +0900] [8541] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:45:00 +0900] [8541] [INFO] Worker exiting (pid: 8541)
+[2019-11-11 16:45:00 +0900] [8540] [INFO] Worker exiting (pid: 8540)
+[2019-11-11 16:45:00 +0900] [8553] [INFO] Booting worker with pid: 8553
+[2019-11-11 16:45:00 +0900] [8554] [INFO] Booting worker with pid: 8554
+[2019-11-11 16:45:55 +0900] [8554] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:45:55 +0900] [8553] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:46:00 +0900] [8553] [INFO] Worker exiting (pid: 8553)
+[2019-11-11 16:46:00 +0900] [8554] [INFO] Worker exiting (pid: 8554)
+[2019-11-11 16:46:00 +0900] [8569] [INFO] Booting worker with pid: 8569
+[2019-11-11 16:46:00 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:46:00 +0900] [8570] [INFO] Booting worker with pid: 8570
+[2019-11-11 16:46:00 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:47:29 +0900] [8569] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:47:29 +0900] [8570] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:47:30 +0900] [8569] [INFO] Worker exiting (pid: 8569)
+[2019-11-11 16:47:30 +0900] [8600] [INFO] Booting worker with pid: 8600
+[2019-11-11 16:47:30 +0900] [8570] [INFO] Worker exiting (pid: 8570)
+[2019-11-11 16:47:30 +0900] [8601] [INFO] Booting worker with pid: 8601
+[2019-11-11 16:48:10 +0900] [8601] [DEBUG] POST /auth/login
+[2019-11-11 16:48:10,881] ERROR in auth: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 74, in get_json
+    rv = json.loads(data)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/json/__init__.py", line 205, in loads
+    return _json.loads(s, **kwargs)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/Cellar/python/3.7.4_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 15, in login
+    data = get_request_data(request)
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/common/utils.py", line 37, in get_request_data
+    return request.get_json()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 82, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/flask/wrappers.py", line 106, in on_json_loading_failed
+    raise BadRequest('Failed to decode JSON object: {0}'.format(e))
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+[2019-11-11 16:48:52 +0900] [8600] [DEBUG] POST /auth/login
+[2019-11-11 16:48:52,916] INFO in auth: {'user_id': 'testuser'}
+[2019-11-11 16:48:52,916] ERROR in auth: 'User' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 20, in login
+    user = User(id=data['user_id']).get()
+AttributeError: 'User' object has no attribute 'get'
+[2019-11-11 16:49:44 +0900] [8600] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:49:45 +0900] [8601] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py modified
+[2019-11-11 16:49:52 +0900] [8601] [INFO] Worker exiting (pid: 8601)
+[2019-11-11 16:49:52 +0900] [8600] [INFO] Worker exiting (pid: 8600)
+[2019-11-11 16:49:52 +0900] [8855] [INFO] Booting worker with pid: 8855
+[2019-11-11 16:49:52 +0900] [7774] [DEBUG] 1 workers
+[2019-11-11 16:49:53 +0900] [8856] [INFO] Booting worker with pid: 8856
+[2019-11-11 16:49:53 +0900] [7774] [DEBUG] 2 workers
+[2019-11-11 16:49:54 +0900] [8856] [DEBUG] POST /auth/login
+[2019-11-11 16:49:54,343] INFO in auth: {'user_id': 'testuser'}
+[2019-11-11 16:49:54,343] ERROR in auth: You have not defined a default connection
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 20, in login
+    user = User.objects(id=data['user_id']).get()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 198, in _get_collection
+    db = cls._get_db()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 176, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 333, in get_db
+    conn = get_connection(alias)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 243, in get_connection
+    raise MongoEngineConnectionError(msg)
+mongoengine.connection.MongoEngineConnectionError: You have not defined a default connection
+[2019-11-11 16:51:00 +0900] [8855] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:51:00 +0900] [8856] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:51:09 +0900] [8855] [INFO] Worker exiting (pid: 8855)
+[2019-11-11 16:51:09 +0900] [8896] [INFO] Booting worker with pid: 8896
+[2019-11-11 16:51:09 +0900] [8856] [INFO] Worker exiting (pid: 8856)
+[2019-11-11 16:51:09 +0900] [8897] [INFO] Booting worker with pid: 8897
+[2019-11-11 16:51:25 +0900] [8896] [INFO] Worker exiting (pid: 8896)
+[2019-11-11 16:51:25 +0900] [8897] [INFO] Worker exiting (pid: 8897)
+[2019-11-11 16:51:25 +0900] [7774] [INFO] Handling signal: term
+[2019-11-11 16:51:25 +0900] [7774] [INFO] Shutting down: Master
+[2019-11-11 16:51:40 +0900] [8944] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10fb52d40>
+  on_reload: <function OnReload.on_reload at 0x10fb52e60>
+  when_ready: <function WhenReady.when_ready at 0x10fb52f80>
+  pre_fork: <function Prefork.pre_fork at 0x10fb680e0>
+  post_fork: <function Postfork.post_fork at 0x10fb68200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10fb68320>
+  worker_int: <function WorkerInt.worker_int at 0x10fb68440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10fb68560>
+  pre_exec: <function PreExec.pre_exec at 0x10fb68680>
+  pre_request: <function PreRequest.pre_request at 0x10fb687a0>
+  post_request: <function PostRequest.post_request at 0x10fb68830>
+  child_exit: <function ChildExit.child_exit at 0x10fb68950>
+  worker_exit: <function WorkerExit.worker_exit at 0x10fb68a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10fb68b90>
+  on_exit: <function OnExit.on_exit at 0x10fb68cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 16:51:40 +0900] [8944] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 16:51:40 +0900] [8944] [DEBUG] Arbiter booted
+[2019-11-11 16:51:40 +0900] [8944] [INFO] Listening at: http://0.0.0.0:5000 (8944)
+[2019-11-11 16:51:40 +0900] [8944] [INFO] Using worker: sync
+[2019-11-11 16:51:40 +0900] [8947] [INFO] Booting worker with pid: 8947
+[2019-11-11 16:51:40 +0900] [8948] [INFO] Booting worker with pid: 8948
+[2019-11-11 16:51:40 +0900] [8944] [DEBUG] 2 workers
+[2019-11-11 16:54:11 +0900] [8947] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:54:11 +0900] [8948] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:54:25 +0900] [8947] [INFO] Worker exiting (pid: 8947)
+[2019-11-11 16:54:25 +0900] [8948] [INFO] Worker exiting (pid: 8948)
+[2019-11-11 16:54:25 +0900] [9141] [INFO] Booting worker with pid: 9141
+[2019-11-11 16:54:25 +0900] [9142] [INFO] Booting worker with pid: 9142
+[2019-11-11 16:54:32 +0900] [9142] [DEBUG] POST /auth/login
+[2019-11-11 16:54:32,614] INFO in auth: {'user_id': 'testuser'}
+[2019-11-11 16:54:32,615] ERROR in auth: You have not defined a default connection
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 20, in login
+    user = User.objects(id=data['user_id']).get()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 198, in _get_collection
+    db = cls._get_db()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 176, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 333, in get_db
+    conn = get_connection(alias)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 243, in get_connection
+    raise MongoEngineConnectionError(msg)
+mongoengine.connection.MongoEngineConnectionError: You have not defined a default connection
+[2019-11-11 16:55:00 +0900] [9142] [INFO] Worker exiting (pid: 9142)
+[2019-11-11 16:55:00 +0900] [9141] [INFO] Worker exiting (pid: 9141)
+[2019-11-11 16:55:00 +0900] [8944] [INFO] Handling signal: term
+[2019-11-11 16:55:00 +0900] [8944] [INFO] Shutting down: Master
+[2019-11-11 16:55:02 +0900] [9209] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x109410d40>
+  on_reload: <function OnReload.on_reload at 0x109410e60>
+  when_ready: <function WhenReady.when_ready at 0x109410f80>
+  pre_fork: <function Prefork.pre_fork at 0x1094260e0>
+  post_fork: <function Postfork.post_fork at 0x109426200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x109426320>
+  worker_int: <function WorkerInt.worker_int at 0x109426440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x109426560>
+  pre_exec: <function PreExec.pre_exec at 0x109426680>
+  pre_request: <function PreRequest.pre_request at 0x1094267a0>
+  post_request: <function PostRequest.post_request at 0x109426830>
+  child_exit: <function ChildExit.child_exit at 0x109426950>
+  worker_exit: <function WorkerExit.worker_exit at 0x109426a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x109426b90>
+  on_exit: <function OnExit.on_exit at 0x109426cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 16:55:02 +0900] [9209] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 16:55:02 +0900] [9209] [DEBUG] Arbiter booted
+[2019-11-11 16:55:02 +0900] [9209] [INFO] Listening at: http://0.0.0.0:5000 (9209)
+[2019-11-11 16:55:02 +0900] [9209] [INFO] Using worker: sync
+[2019-11-11 16:55:02 +0900] [9212] [INFO] Booting worker with pid: 9212
+[2019-11-11 16:55:02 +0900] [9232] [INFO] Booting worker with pid: 9232
+[2019-11-11 16:55:02 +0900] [9209] [DEBUG] 2 workers
+[2019-11-11 16:55:09 +0900] [9212] [DEBUG] POST /auth/login
+[2019-11-11 16:55:09,503] INFO in auth: {'user_id': 'testuser'}
+[2019-11-11 16:55:09,503] ERROR in auth: You have not defined a default connection
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 20, in login
+    user = User.objects(id=data['user_id']).get()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 198, in _get_collection
+    db = cls._get_db()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 176, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 333, in get_db
+    conn = get_connection(alias)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 243, in get_connection
+    raise MongoEngineConnectionError(msg)
+mongoengine.connection.MongoEngineConnectionError: You have not defined a default connection
+[2019-11-11 16:56:05 +0900] [9212] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:56:06 +0900] [9232] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 16:56:09 +0900] [9232] [INFO] Worker exiting (pid: 9232)
+[2019-11-11 16:56:09 +0900] [9212] [INFO] Worker exiting (pid: 9212)
+[2019-11-11 16:56:09 +0900] [9267] [INFO] Booting worker with pid: 9267
+[2019-11-11 16:56:09 +0900] [9209] [DEBUG] 1 workers
+[2019-11-11 16:56:09 +0900] [9268] [INFO] Booting worker with pid: 9268
+[2019-11-11 16:56:09 +0900] [9209] [DEBUG] 2 workers
+[2019-11-11 16:56:11 +0900] [9268] [INFO] Worker exiting (pid: 9268)
+[2019-11-11 16:56:11 +0900] [9267] [INFO] Worker exiting (pid: 9267)
+[2019-11-11 16:56:11 +0900] [9209] [INFO] Handling signal: term
+[2019-11-11 16:56:11 +0900] [9209] [INFO] Shutting down: Master
+[2019-11-11 16:56:14 +0900] [9300] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10c5edd40>
+  on_reload: <function OnReload.on_reload at 0x10c5ede60>
+  when_ready: <function WhenReady.when_ready at 0x10c5edf80>
+  pre_fork: <function Prefork.pre_fork at 0x10c6030e0>
+  post_fork: <function Postfork.post_fork at 0x10c603200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10c603320>
+  worker_int: <function WorkerInt.worker_int at 0x10c603440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10c603560>
+  pre_exec: <function PreExec.pre_exec at 0x10c603680>
+  pre_request: <function PreRequest.pre_request at 0x10c6037a0>
+  post_request: <function PostRequest.post_request at 0x10c603830>
+  child_exit: <function ChildExit.child_exit at 0x10c603950>
+  worker_exit: <function WorkerExit.worker_exit at 0x10c603a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10c603b90>
+  on_exit: <function OnExit.on_exit at 0x10c603cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 16:56:14 +0900] [9300] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 16:56:14 +0900] [9300] [DEBUG] Arbiter booted
+[2019-11-11 16:56:14 +0900] [9300] [INFO] Listening at: http://0.0.0.0:5000 (9300)
+[2019-11-11 16:56:14 +0900] [9300] [INFO] Using worker: sync
+[2019-11-11 16:56:14 +0900] [9303] [INFO] Booting worker with pid: 9303
+[2019-11-11 16:56:14 +0900] [9323] [INFO] Booting worker with pid: 9323
+[2019-11-11 16:56:14 +0900] [9300] [DEBUG] 2 workers
+[2019-11-11 17:13:03 +0900] [9323] [DEBUG] POST /auth/login
+[2019-11-11 17:13:03,400] INFO in auth: {'user_id': 'testuser'}
+[2019-11-11 17:13:03,400] ERROR in auth: You have not defined a default connection
+Traceback (most recent call last):
+  File "/Users/jonghyunlee/python/flask_vue_crud/server/controllers/auth.py", line 20, in login
+    user = User.objects(id=data['user_id']).get()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/queryset/manager.py", line 37, in __get__
+    queryset = queryset_class(owner, owner._get_collection())
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 198, in _get_collection
+    db = cls._get_db()
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/document.py", line 176, in _get_db
+    return get_db(cls._meta.get('db_alias', DEFAULT_CONNECTION_NAME))
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 333, in get_db
+    conn = get_connection(alias)
+  File "/Users/jonghyunlee/.envs/base/lib/python3.7/site-packages/mongoengine/connection.py", line 243, in get_connection
+    raise MongoEngineConnectionError(msg)
+mongoengine.connection.MongoEngineConnectionError: You have not defined a default connection
+[2019-11-11 17:18:48 +0900] [9303] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:18:48 +0900] [9323] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:19:00 +0900] [9303] [INFO] Worker exiting (pid: 9303)
+[2019-11-11 17:19:00 +0900] [9517] [INFO] Booting worker with pid: 9517
+[2019-11-11 17:19:03 +0900] [9323] [INFO] Worker exiting (pid: 9323)
+[2019-11-11 17:19:03 +0900] [9518] [INFO] Booting worker with pid: 9518
+[2019-11-11 17:19:10 +0900] [9518] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:19:10 +0900] [9517] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:19:16 +0900] [9517] [INFO] Worker exiting (pid: 9517)
+[2019-11-11 17:19:16 +0900] [9521] [INFO] Booting worker with pid: 9521
+[2019-11-11 17:19:18 +0900] [9518] [INFO] Worker exiting (pid: 9518)
+[2019-11-11 17:19:18 +0900] [9522] [INFO] Booting worker with pid: 9522
+[2019-11-11 17:20:11 +0900] [9521] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:20:12 +0900] [9522] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:20:17 +0900] [9521] [INFO] Worker exiting (pid: 9521)
+[2019-11-11 17:20:17 +0900] [9532] [INFO] Booting worker with pid: 9532
+[2019-11-11 17:20:19 +0900] [9522] [INFO] Worker exiting (pid: 9522)
+[2019-11-11 17:20:19 +0900] [9533] [INFO] Booting worker with pid: 9533
+[2019-11-11 17:21:20 +0900] [9533] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:21:20 +0900] [9532] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:21:32 +0900] [9532] [INFO] Worker exiting (pid: 9532)
+[2019-11-11 17:21:32 +0900] [9537] [INFO] Booting worker with pid: 9537
+[2019-11-11 17:21:34 +0900] [9533] [INFO] Worker exiting (pid: 9533)
+[2019-11-11 17:21:34 +0900] [9538] [INFO] Booting worker with pid: 9538
+[2019-11-11 17:24:21 +0900] [9538] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:24:22 +0900] [9537] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:24:33 +0900] [9537] [INFO] Worker exiting (pid: 9537)
+[2019-11-11 17:24:33 +0900] [9543] [INFO] Booting worker with pid: 9543
+[2019-11-11 17:24:34 +0900] [9538] [INFO] Worker exiting (pid: 9538)
+[2019-11-11 17:24:35 +0900] [9544] [INFO] Booting worker with pid: 9544
+[2019-11-11 17:24:41 +0900] [9544] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:24:41 +0900] [9543] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/database.py modified
+[2019-11-11 17:24:48 +0900] [9543] [INFO] Worker exiting (pid: 9543)
+[2019-11-11 17:24:48 +0900] [9548] [INFO] Booting worker with pid: 9548
+[2019-11-11 17:24:50 +0900] [9544] [INFO] Worker exiting (pid: 9544)
+[2019-11-11 17:24:50 +0900] [9550] [INFO] Booting worker with pid: 9550
+[2019-11-11 17:25:01 +0900] [9548] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:25:02 +0900] [9550] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:25:03 +0900] [9548] [INFO] Worker exiting (pid: 9548)
+[2019-11-11 17:25:03 +0900] [9556] [INFO] Booting worker with pid: 9556
+[2019-11-11 17:25:05 +0900] [9550] [INFO] Worker exiting (pid: 9550)
+[2019-11-11 17:25:05 +0900] [9557] [INFO] Booting worker with pid: 9557
+[2019-11-11 17:25:10 +0900] [9556] [INFO] Worker exiting (pid: 9556)
+[2019-11-11 17:25:10 +0900] [9557] [INFO] Worker exiting (pid: 9557)
+[2019-11-11 17:25:10 +0900] [9300] [INFO] Handling signal: term
+[2019-11-11 17:25:10 +0900] [9300] [INFO] Shutting down: Master
+[2019-11-11 17:25:13 +0900] [9595] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x106633d40>
+  on_reload: <function OnReload.on_reload at 0x106633e60>
+  when_ready: <function WhenReady.when_ready at 0x106633f80>
+  pre_fork: <function Prefork.pre_fork at 0x1066490e0>
+  post_fork: <function Postfork.post_fork at 0x106649200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x106649320>
+  worker_int: <function WorkerInt.worker_int at 0x106649440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x106649560>
+  pre_exec: <function PreExec.pre_exec at 0x106649680>
+  pre_request: <function PreRequest.pre_request at 0x1066497a0>
+  post_request: <function PostRequest.post_request at 0x106649830>
+  child_exit: <function ChildExit.child_exit at 0x106649950>
+  worker_exit: <function WorkerExit.worker_exit at 0x106649a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x106649b90>
+  on_exit: <function OnExit.on_exit at 0x106649cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 17:25:13 +0900] [9595] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 17:25:13 +0900] [9595] [DEBUG] Arbiter booted
+[2019-11-11 17:25:13 +0900] [9595] [INFO] Listening at: http://0.0.0.0:5000 (9595)
+[2019-11-11 17:25:13 +0900] [9595] [INFO] Using worker: sync
+[2019-11-11 17:25:13 +0900] [9598] [INFO] Booting worker with pid: 9598
+[2019-11-11 17:25:13 +0900] [9618] [INFO] Booting worker with pid: 9618
+[2019-11-11 17:25:13 +0900] [9595] [DEBUG] 2 workers
+[2019-11-11 17:27:42 +0900] [9598] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:27:42 +0900] [9618] [INFO] Worker reloading: /Users/jonghyunlee/python/flask_vue_crud/server/server_app.py modified
+[2019-11-11 17:27:43 +0900] [9598] [INFO] Worker exiting (pid: 9598)
+[2019-11-11 17:27:43 +0900] [9642] [INFO] Booting worker with pid: 9642
+[2019-11-11 17:27:43 +0900] [9618] [INFO] Worker exiting (pid: 9618)
+[2019-11-11 17:27:43 +0900] [9643] [INFO] Booting worker with pid: 9643
+[2019-11-11 17:27:45 +0900] [9642] [INFO] Worker exiting (pid: 9642)
+[2019-11-11 17:27:45 +0900] [9643] [INFO] Worker exiting (pid: 9643)
+[2019-11-11 17:27:45 +0900] [9595] [INFO] Handling signal: term
+[2019-11-11 17:27:45 +0900] [9595] [INFO] Shutting down: Master
+[2019-11-11 17:40:07 +0900] [10220] [DEBUG] Current configuration:
+  config: None
+  bind: ['0.0.0.0:5000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /Users/jonghyunlee/python/flask_vue_crud
+  daemon: True
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 501
+  group: 20
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /Users/jonghyunlee/python/flask_vue_crud/logs/web_error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: unix:///var/run/syslog
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  statsd_prefix: 
+  proc_name: flask_app
+  default_proc_name: server.server_app:create_app({"--debug": True })
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x10b7ead40>
+  on_reload: <function OnReload.on_reload at 0x10b7eae60>
+  when_ready: <function WhenReady.when_ready at 0x10b7eaf80>
+  pre_fork: <function Prefork.pre_fork at 0x10b8000e0>
+  post_fork: <function Postfork.post_fork at 0x10b800200>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x10b800320>
+  worker_int: <function WorkerInt.worker_int at 0x10b800440>
+  worker_abort: <function WorkerAbort.worker_abort at 0x10b800560>
+  pre_exec: <function PreExec.pre_exec at 0x10b800680>
+  pre_request: <function PreRequest.pre_request at 0x10b8007a0>
+  post_request: <function PostRequest.post_request at 0x10b800830>
+  child_exit: <function ChildExit.child_exit at 0x10b800950>
+  worker_exit: <function WorkerExit.worker_exit at 0x10b800a70>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x10b800b90>
+  on_exit: <function OnExit.on_exit at 0x10b800cb0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: TLSv1
+  raw_paste_global_conf: []
+[2019-11-11 17:40:07 +0900] [10220] [INFO] Starting gunicorn 19.9.0
+[2019-11-11 17:40:07 +0900] [10220] [DEBUG] Arbiter booted
+[2019-11-11 17:40:07 +0900] [10220] [INFO] Listening at: http://0.0.0.0:5000 (10220)
+[2019-11-11 17:40:07 +0900] [10220] [INFO] Using worker: sync
+[2019-11-11 17:40:07 +0900] [10223] [INFO] Booting worker with pid: 10223
+[2019-11-11 17:40:07 +0900] [10239] [INFO] Booting worker with pid: 10239
+[2019-11-11 17:40:07 +0900] [10220] [DEBUG] 2 workers
+[2019-11-11 17:40:12 +0900] [10223] [INFO] Worker exiting (pid: 10223)
+[2019-11-11 17:40:12 +0900] [10239] [INFO] Worker exiting (pid: 10239)
+[2019-11-11 17:40:12 +0900] [10220] [INFO] Handling signal: term
+[2019-11-11 17:40:12 +0900] [10220] [INFO] Shutting down: Master

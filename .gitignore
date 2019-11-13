@@ -2,3 +2,5 @@
 __pycache__
 logs
 *.log
+dist
+node_modules

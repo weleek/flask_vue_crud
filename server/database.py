@@ -5,8 +5,31 @@ import datetime
 
 import psutil
 from flask_mongoengine import MongoEngine
+from pymongo import monitoring
 
 from server.exceptions import ProcessException
+from server.common.utils import logger_init
+
+
+class CommandLogger(monitoring.CommandListener):
+    logger = logger_init('database', level='DEBUG')
+
+    def started(self, event):
+        self.logger.debug("Command {0.command_name} with request id "
+                 "{0.request_id} started on server "
+                 "{0.connection_id}".format(event))
+
+    def succeeded(self, event):
+        self.logger.debug("Command {0.command_name} with request id "
+                 "{0.request_id} on server {0.connection_id} "
+                 "succeeded in {0.duration_micros} "
+                 "microseconds".format(event))
+
+    def failed(self, event):
+        self.logger.debug("Command {0.command_name} with request id "
+                 "{0.request_id} on server {0.connection_id} "
+                 "failed in {0.duration_micros} "
+                 "microseconds".format(event))
 
 
 def database_init(app, options):
@@ -14,8 +37,10 @@ def database_init(app, options):
         raise ProcessException('Database is not running...')
 
     app.config['MONGODB_SETTINGS'] = options['database']['settings']
-    database = MongoEngine()
+    database = MongoEngine(app)
     database.init_app(app)
+    if options['--dev'] or options['logging']['level'] == 'debug':
+        monitoring.register(CommandLogger())
 
 
 def check_service():
@@ -44,8 +69,9 @@ def database_start(config):
 
     if not os.access(f'{config.DATABASE_LOG_DIR}', os.W_OK):
         os.chmod(f'{config.DATABASE_LOG_DIR}', 0o777)
-
-    os.system(f'mongod --fork --logpath {config.DATABASE_LOG_DIR}/database.log --logappend --dbpath {config.DATABASE_HOME}')
+    cmd = f'mongod --fork --logpath {config.DATABASE_LOG_DIR}/database.log --logappend --dbpath {config.DATABASE_HOME}'
+    print(cmd)
+    os.system(cmd)
 
 
 def database_shutdown():

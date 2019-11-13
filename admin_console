@@ -4,7 +4,7 @@
 
     Usage:
         admin_console -h | --help | --version
-        admin_console web [--debug] (--start | --stop | --status)
+        admin_console web [--dev] [--debug] (--start | --stop | --status)
         admin_console database (--start | --stop | --status)
         admin_console console
         admin_console build
@@ -23,6 +23,7 @@
         -h --help   help document.
         --version   verbose mode.
         --debug     flask development(templates auto reload) mode.
+        --dev       development mode.
 """
 # default libs
 import os
