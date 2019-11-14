@@ -8,4 +8,4 @@ gunicorn==19.9.0
 gevent==1.4.0
 passlib==1.7.1
 python-jose==3.0.1
-flask-restful==0.3.7
+flask-restplus==0.12.1

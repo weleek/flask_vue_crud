@@ -5,6 +5,7 @@ import traceback
 import logging
 import colorlog
 from passlib.hash import pbkdf2_sha256
+import hashlib
 
 
 def print_stack_trace():
@@ -29,6 +30,10 @@ def logger_init(module_name='', level='INFO', logger=None):
     handler.setFormatter(formatter)
     logger.addHandler(handler)
     return logger
+
+
+def sha256_encode(string: str):
+    return hashlib.sha256(string.encode()).hexdigest()
 
 
 def get_request_data(request):

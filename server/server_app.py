@@ -18,11 +18,12 @@ from server.database import database_init
 
 
 def web_init(app, options):
-    app.config['SECRET_KEY'] = os.urandom(24)
+    app.config['SECRET_KEY'] = options['server']['secret-key']
     if options['--debug']:
         app.jinja_env.auto_reload = options['--debug']
         app.debug = options['--debug']
         app.env = 'development'
+        app.config['SWAGGER_UI_DOC_EXPANSION'] = 'full'
 
     for controller in os.listdir(f'{os.path.dirname(os.path.realpath(__file__))}/controllers'):
         if controller[:2] == '__':
