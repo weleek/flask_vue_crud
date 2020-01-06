@@ -9,6 +9,7 @@ from pymongo import monitoring
 
 from server.exceptions import ProcessException
 from server.common.utils import logger_init
+from config import is_windows
 
 
 class CommandLogger(monitoring.CommandListener):
@@ -51,13 +52,16 @@ def check_service():
 def get_pids():
     result = []
     for p in psutil.process_iter():
-        if p.name() == 'mongod':
+        if p.name().lower() == 'mongod' or p.name().lower() == 'mongod.exe':
             result.append(p.pid)
     return result
 
 
 def database_start(config):
     print('Database start...')
+    if is_windows:
+        raise ProcessException('In case of Windows OS, please run it manually.')
+
     if check_service():
         raise ProcessException('Database is already running...')
 
@@ -76,6 +80,9 @@ def database_start(config):
 
 def database_shutdown():
     print('Database stop...')
+    if is_windows:
+        raise ProcessException('In case of Windows OS, please run it manually.')
+
     if not check_service():
         raise ProcessException('Database is not running...')
     #os.system(f'mongod --dbpath {DATABASE_HOME} --shutdown')

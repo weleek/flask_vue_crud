@@ -2,7 +2,12 @@
 import os
 import sys
 import yaml
+import platform
 from pathlib import Path
+
+
+def is_windows():
+    return platform.system().upper().find('WINDOWS') != -1
 
 
 class Config:
@@ -19,7 +24,7 @@ class Config:
         if os.getcwd() != self.WORK_DIR:
             os.chdir(self.WORK_DIR)
 
-        self.options = argv
+        self.options = argv or {}
         with open(f"{self.WORK_DIR}/config.yaml", 'r') as stream:
             conf = yaml.safe_load(stream)
             self.options.update(conf)

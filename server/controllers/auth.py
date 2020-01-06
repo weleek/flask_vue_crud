@@ -74,7 +74,28 @@ def del_token():
         return jsonify({'ERROR': str(e)})
 
 
-@app.route('/check', methods=['GET'])
+@app.route('/token_check', methods=['GET'])
 @verify_token
 def test():
-    return jsonify({'status': 'ok'})
+    return jsonify({'status': 'success'})
+
+# test insert code...
+@app.route('/user', methods=['PUT'])
+def insert_user():
+    current_app.logger.debug(f'REQUEST JSON : {request.json}')
+    User(_id=request.json['userid'], name=request.json['name'], password=sha256_encode(request.json['password'])).save()
+    return jsonify({'status': 'success'})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
